@@ -1,4 +1,5 @@
 class ResaleShop:
+    # for when you want to creat an object, ResaleShop
 
     # importing Dict from typing module
     from typing import Dict, Optional
@@ -40,7 +41,7 @@ class ResaleShop:
     Takes in an item_id and a new price, updates the price of the associated
     computer if it is the inventory, prints error message otherwise
     '''    
-    def update_price(self, itemID: int, new_price: int):
+    def update_price(self, itemID, new_price: int):
         if itemID in ResaleShop.inventory:
             ResaleShop.inventory[itemID]["price"] = new_price
         else:
@@ -55,7 +56,6 @@ class ResaleShop:
             # For each item
             for ResaleShop.itemID in ResaleShop.inventory: 
                 # Print its details
-                #computer.return_computer #this only works if a computer is passed in which defeats the point of an inventory
                 print(f'Item ID: {ResaleShop.itemID} : {ResaleShop.inventory[ResaleShop.itemID]}')
         else:
             print("No inventory to display.")
@@ -74,7 +74,7 @@ class ResaleShop:
     '''
     Changing the os, with price parameters based on age 
     '''
-    def refurbish(self, itemID: int, new_os: Optional[str] = None):
+    def refurbish(self, itemID, new_os: Optional[str] = None):
         if ResaleShop.itemID in ResaleShop.inventory:
             computer = ResaleShop.inventory[ResaleShop.itemID] # locate the computer
             if int(computer["year_made"]) < 2000:
@@ -145,7 +145,9 @@ def main():
 
     # check that the price change worked
     shop.print_inventory()
+    shop.sell(1)
 
+    shop.refurbish(1, "MacOS Monterey")
 
 
 if __name__ == "__main__":

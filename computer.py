@@ -1,6 +1,5 @@
 class Computer:
-
-    # What attributes will it need?
+    # for use within the oo_resale_shop.py
 
     description: str
     processor_type: str
@@ -12,8 +11,6 @@ class Computer:
     itemID: int
     dictionary: dict
 
-    # How will you set up your constructor?
-    # Remember: in python, all constructors have the same name (__init__)
     def __init__(self, description, processor, hard_drive, memory, os, year, price):
         self.description = description
         self.processor_type = processor
@@ -41,15 +38,3 @@ class Computer:
             'year_made': self.year_made,
             'price': self.price}
         
-
-    
-   
-
-# def main():
-#     computer = Computer("Mac Pro (Late 2013)", "3.5 GHc 6-Core Intel Xeon E5", 1024, 64, "macOS Big Sur", 2013, 1500)
-#     computer.create_computer()
-    
-        
-
-# if __name__ == "__main__":
-#         main()
