@@ -118,22 +118,31 @@ def main():
 
     # creating an instance shop
     shop = ResaleShop()
+
     # buying a computer
     shop.buy(computer1)
+
     # and buying another
     shop.buy(computer2)
+
     # check inventory
     shop.print_inventory()
+
     # now we sell
-    shop.sell(1) #selling the wrong computer
+    shop.sell(1) 
+
     # and check inventory again
     shop.print_inventory()
+
     # refurbish a computer
     shop.refurbish(2, "MacOS Monterey")
+
     # check that the refurbishing worked
     shop.print_inventory()
+
     # change the price
     shop.update_price(2, 800)
+
     # check that the price change worked
     shop.print_inventory()
 
